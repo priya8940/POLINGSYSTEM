@@ -4,6 +4,8 @@ const quesroute=require('./route/question');
 const optionroute=require('./route/option');
 
 const app=express();
+app.use(express.json());
+
 
 console.log("working fine");
 app.use('/v1/questions/',quesroute);

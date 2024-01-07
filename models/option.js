@@ -3,18 +3,18 @@ const mongoose=require('mongoose');
 const optionSchema=new mongoose.Schema({
     text:{
         type:String,
-        required:true,
-        unique:true
+        required:true
 
     },
     votes:{
          type:String,
-         required:true,
+         required:false,
+         default:0
 
     },
     link_to_vote:{
         type:String,
-        required:true
+        required:false
     },
 
   
