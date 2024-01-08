@@ -8,8 +8,8 @@ app.use(express.json());
 
 
 console.log("working fine");
-app.use('/v1/questions/',quesroute);
-app.use('/v1/options/',optionroute);
+app.use('/',quesroute);
+app.use('/',optionroute);
 
 app.listen('5000');
 console.log('app is running on port')

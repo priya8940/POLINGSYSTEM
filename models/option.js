@@ -7,7 +7,7 @@ const optionSchema=new mongoose.Schema({
 
     },
     votes:{
-         type:String,
+         type:Number,
          required:false,
          default:0
 
@@ -16,7 +16,9 @@ const optionSchema=new mongoose.Schema({
         type:String,
         required:false
     },
-
+    q_id:{
+        type: mongoose.Schema.Types.ObjectId, ref: 'question' 
+    }
   
 },
     {
