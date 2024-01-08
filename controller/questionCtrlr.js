@@ -45,9 +45,9 @@ module.exports.deleteQue =async (req, res)=>{
     return res;
     
 }
-module.exports.populateOptions=async (req,res)=>{
+module.exports.viewQuestion=async (req,res)=>{
     const questionId = req.params.id;
-    const question= await queModel.findById(questionId);
+    const question= await queModel.findById(questionId).populate('options');
     if(!question){
         res.json({
             'status_code':404,
@@ -55,10 +55,9 @@ module.exports.populateOptions=async (req,res)=>{
         });
         return res;
     }
-    let optionsArr=await optionModel.find();
-       res.json({
+    res.json({
         'status_code':200,
-        'options':optionsArr
+        'question':question
        })
        return res;
 

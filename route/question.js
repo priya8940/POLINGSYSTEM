@@ -5,7 +5,7 @@ const quetnctrlr=require('../controller/questionCtrlr');
 queRouter.post('/questions/create',quetnctrlr.createQue);
 queRouter.get('/questions/getAllQuestions',quetnctrlr.getAllQue);
 queRouter.delete('/questions/:id/delete',quetnctrlr.deleteQue);
-queRouter.get('/questions/:id',quetnctrlr.populateOptions);
+queRouter.get('/questions/:id',quetnctrlr.viewQuestion);
 
 
 module.exports=queRouter;
